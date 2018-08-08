@@ -13,8 +13,8 @@ See below for a basic diagram I drew.
 
 Here is general list of improvements and concepts I'd like to approach and/or implement (some soon, some not so soon) as this potentially grows before my GCP dollars run out...
 
-* automate the updating of the recent price page within the nginx image, potentially by making a NFS server on the cluster and mounting the directory where nginx looks for it's files or a configmap and triggering an update when the file changes - but again, nginx webpages are not exactly my endgoal (ingress is another story)
-* get the jobs and initial commands driving some of the actions to run off a file stored remotely, or automate the build from developer updates to just the code, potentially off a github webhook.
+* Automate the updating of the recent price page within the nginx image, potentially by making a NFS server on the cluster and mounting the directory where nginx looks for it's files or a configmap and triggering an update when the file changes - but again, nginx webpages are not exactly my endgoal (ingress is another story)
+* Get the jobs and initial commands driving some of the actions to run off a file stored remotely, or automate the build from developer updates to just the code, potentially off a github webhook.
 * Use Istio or Kibana etc. to log and monitor these various pieces
 * Better understand security and best practices for everything, from tackling vulnerabilities to just building a smarter, safer infrastructure.
 * Integrate CI/CD pipelines for this entire process
