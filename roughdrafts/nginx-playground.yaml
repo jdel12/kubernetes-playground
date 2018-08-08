@@ -27,15 +27,33 @@ spec:
       labels:
         run: my-nginx
     spec:
+      volumes:
+        - name: html
+          emptyDir: {} 
       containers:
       - name: my-nginx
         image: nginx
         ports:
         - containerPort: 80
+        volumeMounts:
+        - name: html
+          mountPath: /usr/share/nginx/html
+#        lifecycle:
+#          postStart:
+#            exec:
+#              command: ["/bin/sh", "-c", "echo */1 * * * * /bin/sh echo crontabworked  >> /etc/crontab"]
+      - name: my-nginx-pycron
+        image: gcr.io/praxis-atrium-209704/python-enviro-cron:v1
+        volumeMounts:
+        - name: html
+          mountPath: /html
         lifecycle:
           postStart:
             exec:
-              command: ["/bin/sh", "-c", "echo Hello from the other side > /usr/share/nginx/html/test.html"]
+              command: ["/bin/sh", "-c", "python", "-c", "import requests; import pandas; pandas.DataFrame(['testpythondf']).to_html('/html/index.html')"]
+
+
+
 #        volumeMounts:
 #        - mountPath: /#NEWPATH
 #          name: test-index
