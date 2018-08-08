@@ -9,7 +9,9 @@ The primary infrastructure that exists here is based around showing the latest e
 
 See below for a basic diagram I drew.
 
+
 ![Image](https://github.com/jdel12/kubernetes-playground/blob/master/image1.jpeg?raw=true)
+
 
 Here is general list of improvements and concepts I'd like to approach and/or implement (some soon, some not so soon) as this potentially grows before my GCP dollars run out...
 
