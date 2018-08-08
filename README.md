@@ -1,5 +1,6 @@
 A basic exploration of kubernetes
 ==============
+
 # If kubernetes means captain in greek, this is a pirate captain with a casual attitude towards best practices...
 ...but this is how I am learning and exploring the multitude of ways you can deploy and use the many different pieces of kubernetes, the ever growing container orchestration system from Google.  I acknowledge that much of what is here is hardly ideal or enterprise grade but my goal is to develop a conceptual and working understanding of various types of controllers, services, storage mechanisms and how they interact so when the time to tackle enterprise solutions comes, I can successfully navigate those problems.
 
