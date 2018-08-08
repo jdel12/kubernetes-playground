@@ -2,11 +2,11 @@ A basic exploration of kubernetes
 ==============
 If kubernetes means captain in greek, this is a pirate captain with a casual attitude towards best practices...
 -------------
-_...but this is how I am learning and exploring the multitude of ways you can deploy and use the many different pieces of kubernetes, the ever growing container orchestration system from Google._
+...but this is how I am learning and exploring the multitude of ways you can deploy and use the many different pieces of kubernetes, the ever growing container orchestration system from Google.  I acknowledge that much of what is here is hardly ideal or enterprise grade but my goal is to develop a conceptual and working understanding of various types of controllers, services, storage mechanisms and how they interact so when the time to tackle enterprise solutions comes, I can successfully navigate those problems.
 
-_I acknowledge that much of what is here is hardly ideal or enterprise grade but my goal is to develop a conceptual and working understanding of various types of controllers, services, storage mechanisms and so on so when the time to tackle enterprise solutions comes, I can successfully navigate those problems._
+This is serving as a general area for me to store files and write yamls for implementation them on a GCP account.
 
-This is serving as a general area for me to store files and write yamls for implementation them on a GCP account BUT the primary infrastructure that exists here is based around showing the latest equity prices for specific companies via an nginx web server and supported by a elasticsearch database.  It will contact the IEX exchange and their fantastic, free financial API (https://iextrading.com/developer/docs/) and pull down the latest price, then storing it in the elasticsearch engine before it is retrieved by the nginx webserver as it deploys.  
+The primary infrastructure that exists here is based around showing the latest equity prices for specific companies via an nginx web server and supported by a elasticsearch database.  It will contact the IEX exchange and their fantastic, free financial API (https://iextrading.com/developer/docs/) and pull down the latest price, then storing it in the elasticsearch engine before it is retrieved by the nginx webserver as it deploys.  
 
 See below for a basic diagram I drew.
 
