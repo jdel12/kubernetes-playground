@@ -21,5 +21,3 @@ Here is general list of improvements and concepts I'd like to approach and/or im
 * Various things like taints, secrets, best DNS practices, judging resource needs accurately
 * Better understanding networking best practices, even with interaction between multiple clusters
 * Integrate this with a VM or cluster of VMs on my homeserver and build a hybrid architecture.
-
-
