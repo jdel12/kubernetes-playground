@@ -1,0 +1,27 @@
+---
+kind: PersistentVolume
+apiVersion: v1
+metadata:
+  name: pv01
+  labels:
+    app: iexdemo
+spec:
+  capacity:
+    storage: 200Gi
+  accessModes:
+    - ReadWriteOnce
+  hostPath:
+    path: "/iexdemo/storage"
+---
+kind: PersistentVolumeClaim
+apiVersion: v1
+metadata:
+  name: elastic-claim
+  labels:
+    app: iexdemo
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 125Gi

@@ -1,0 +1,22 @@
+---
+apiVersion: batch/v1beta1
+kind: CronJob
+metadata:
+  name: iexcron-python-intake
+  labels:
+    app: iexdemo
+    type: job
+spec:
+  schedule: "0,30 8-16 * * 1-5"
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          containers:
+          - name: pythonenviro-cron
+            image: gcr.io/praxis-atrium-209704/pythoneviro
+            args:
+            - python
+            - -c
+            - 'import requests; import json; x = requests.get("https://api.iextrading.com/1.0/tops/last?symbols=APC"); print(x.content.decode()); print(str(x.status_code)); url = "http://10.10.0.50:49200/iexindex/latest/APC_" + str(x.json()[0]["time"]); y = requests.post(url, data=json.dumps(x.json()[0]), headers={"content-type": "application/json"}); print(str(y.status_code))'
+          restartPolicy: OnFailure
